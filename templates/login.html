@@ -1,0 +1,14 @@
+{% extends "base.htm;" %}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+<!-- The action attr is a way of saying what page you want to redirect to once
+you submit the form.  # (pound) means you want to stay on the same page. This is
+a login form that will be sending and submitting the information typed in the
+inputs. -->
+<form action="#" method="post">
+    <p>Name:</p>
+    <p><input type="text" name="nm" /></p>
+    <p><input type="submit" value="submit" /></p>
+</form>
+{% endblock %}
