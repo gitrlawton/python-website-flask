@@ -1,7 +1,15 @@
 {% extends "base.htm;" %}
 {% block title %}Login Page{% endblock %}
 
-{% block content %}
+{% block content %} 
+    <!-- Display all of the flash messages that come up.-->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 <!-- The action attr is a way of saying what page you want to redirect to once
 you submit the form.  # (pound) means you want to stay on the same page. This is
 a login form that will be sending and submitting the information typed in the
